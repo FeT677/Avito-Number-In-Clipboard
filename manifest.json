@@ -1,10 +1,13 @@
-{
+
+{ "$schema":"https://json.schemastore.org/chrome-manifest",
   "manifest_version": 3,
-  "name": "Авито",
-  "version": "3000",
+  "name": "Avito Extension",
+  "version": "0.7",
   "description": "Копирует номер телефона в формате PNG",
   "permissions": [
-    "clipboardWrite"
+    "clipboardWrite",
+    "activeTab",
+    "scripting"
   ],
   "background": {
     "service_worker": "background.js"
@@ -14,5 +17,11 @@
       "matches": ["*://*/*"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "icons":
+    {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
 }

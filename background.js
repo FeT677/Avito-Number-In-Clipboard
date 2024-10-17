@@ -1,1 +1,4 @@
-// не ндо сюда ничего писать
+chrome.runtime.onInstalled.addListener(() => {
+    console.log("Background script запущен.");
+  });
+  

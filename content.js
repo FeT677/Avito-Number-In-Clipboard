@@ -1,3 +1,11 @@
+
+if (window.location.hostname.endsWith('avito.ru')) {
+  // Ваш существующий код для наблюдения за номером телефона
+  observePhoneNumber();
+} else {
+  console.warn("Скрипт работает только на avito.ru");
+}
+
 function observePhoneNumber() {
   const observer = new MutationObserver((mutations, observer) => {
     const phoneImage = document.querySelector('[data-marker="phone-popup/phone-image"]');
@@ -62,6 +70,3 @@ function showNotification(message) {
     notification.remove();
   }, 3000);
 }
-
-// Запускаем скрипт сразу без ожидания загрузки страницы
-observePhoneNumber();
